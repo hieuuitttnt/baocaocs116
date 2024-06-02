@@ -1,6 +1,4 @@
-# Credit Underwriting Technical Presentation
-
-For more personal insights, please refer to the threads by Olivier, Ryan, and myself, as well as Phil's comment.
+# Báo cáo kỹ thuật về cuộc thi xử lý dữ liệu tín dụng
 
 ## Introduction
 
