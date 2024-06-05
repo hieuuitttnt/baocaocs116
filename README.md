@@ -1,15 +1,13 @@
 # Báo cáo kỹ thuật về cuộc thi xử lý dữ liệu tín dụng
 
-## Introduction
+## Giới Thiệu
+Từ kinh nghiệm trước đây của em trong việc thẩm định tín dụng, em nhận thấy rằng đây là một trong những vấn đề phức tạp nhất để áp dụng học máy. Dữ liệu trong lĩnh vực này thường rất đa dạng, được thu thập qua các khoảng thời gian khác nhau và đến từ nhiều nguồn khác nhau, có thể thay đổi và thay thế trong quá trình thu thập dữ liệu. Việc đưa ra một biến mục tiêu thích hợp cũng là một quá trình rất khó khăn, đòi hỏi kiến thức sâu rộng về lĩnh vực này và kỹ năng phân tích kinh doanh tinh tế. Em muốn khen ngợi Home Credit và Kaggle vì đã cung cấp một bộ dữ liệu tuyệt vời như vậy, không có rò rỉ và rất dễ dàng áp dụng các kỹ thuật học máy.
 
-From my prior experience with credit underwriting, I’ve come to appreciate that this is one of the most complex problems for applying machine learning. Data in this domain tends to be very heterogeneous, collected over different time frames, and coming from many different sources that may change and alter in the midst of the data collection process. Coming up with a proper target variable is also a very tricky process, requiring deep domain knowledge and refined business analysis skills. I want to commend Home Credit and Kaggle for providing such a great dataset, which was leak-free and very amenable to machine learning techniques.
+Dựa trên những gì đã biết về thẩm định tín dụng và các vấn đề học máy tương tự, rõ ràng hai điều sẽ rất quan trọng để xây dựng một mô hình tốt cho cuộc thi này:
 
-Based on what is known about credit underwriting, and similar machine learning problems, it was clear that two things would be crucial for building a good model for this competition:
-1. A good set of smart features.
-2. A diverse set of base algorithms.
-
-We were able to utilize four main sources of feature diversity, along with a few minor additional ones.
-
+Một tập hợp các đặc trưng thông minh.
+Một tập hợp đa dạng các thuật toán cơ bản.
+Em đã có thể tận dụng bốn nguồn chính của sự đa dạng đặc trưng, cùng với một số nguồn nhỏ bổ sung khác.
 
 ## Trình tổng hợp cho trích xuất đặc trưng  (Aggregator for Feature Extraction)
 __Tổng quan__
