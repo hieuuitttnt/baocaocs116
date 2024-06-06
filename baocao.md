@@ -145,7 +145,7 @@ Các Tính năng Phân loại: Nó xử lý các tính năng phân loại khác 
 Trung bình Xác suất: Xác suất cuối cùng được tính toán là trung bình của các xác suất từ tất cả các mô hình.
 ## Các thử nghiệm thất bại
 <ol>
-  <li>FThử nghiệm metric hack: 
+  <li>Thử nghiệm metric hack: 
 y_pred: bao gồm các dự đoán rằng  từ tập kiểm tra.
 condition=y_pred < 0.96 lọc các mục giống nhất với tập huấn luyện (có thể là những tuần đầu của tập kiểm tra).
 df_subm.loc[condition, 'score'] = (df_subm.loc[condition, 'score'] - 0.05).clip(0) làm giảm điểm số cho các mục đã được lọc và nên tạo hình phạt lớn từ mức 88.0⋅min(0, a) trong thước đo đánh giá.(khiến cho các xác suất dự đoán của mục này ít được chọn). Và nó chỉ hiệu quả trên public test, Private test có tham số condition khác nên không dùng được.</li>
