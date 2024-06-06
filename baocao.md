@@ -115,12 +115,23 @@ Sau khi tham khảo nhiều lời giải từ các notebook giống như nhiều
 ## Tối ưu bộ nhớ
 Sau khi tham khảo lời giải từ notebook của XIAOLEI LIAN cũng như nhiều notebook khác, em biết được rằng khi làm việc với dữ liệu lớn vốn tiêu thụ lượng lớn RAM thì việc giảm thiểu bộ nhớ sử dụng của dữ liệu là vô cùng quan trọng. Để làm được điều đó thì đối với các dữ liệu số nguyên, số thực thì em sẽ tìm các giá trị lớn nhất và nhỏ nhất trong cột đó và tìm cách giảm kiểu dữ liệu xuống để dữ liệu không bị tràn số, chẳng hạn như từ int64 xuống còn int32. Còn đối với kiểu dữ liệu category thì bỏ qua vì vốn dĩ nó đã tối ưu bộ nhớ rồi. Tương tự với kiểu dữ liệu object. Trước khi tối ưu bộ nhớ, tập train tiêu thụ 4322.75 MB, con số này sau khi xử lí giảm bộ nhớ thì còn 1528.81 MB. Đối với tập test, con số này lần lượt là 0.04 MB và 0.02 MB. 
 ## Base model
-In the context of your provided file, which appears to involve the use of LightGBM (LGB) and CatBoost models, here's how these concepts apply:
+Sử dụng các mô hình LightGBM (LGB) và CatBoost.
 
-Base Models in the File:
+LightGBM: Một khung làm việc tăng cường gradient sử dụng các thuật toán học dựa trên cây. Nó được biết đến với hiệu quả và tốc độ, đặc biệt là với các tập dữ liệu lớn.
 
-LightGBM: A gradient boosting framework that uses tree-based learning algorithms. It is known for its efficiency and speed, particularly with large datasets.
-CatBoost: Another gradient boosting algorithm that is particularly well-suited for categorical data and can handle complex datasets effectively.
+CatBoost: Một thuật toán tăng cường gradient khác, đặc biệt phù hợp với dữ liệu phân loại và có khả năng xử lý hiệu quả các tập dữ liệu phức tạp.
+
+Giải thích:
+LightGBM:
+
+Khung làm việc tăng cường gradient: LightGBM là một phương pháp học máy sử dụng nhiều cây quyết định để cải thiện hiệu suất của mô hình.
+Thuật toán học dựa trên cây: LightGBM xây dựng các cây quyết định theo từng bước, mỗi bước tìm cách sửa lỗi của cây trước đó.
+Hiệu quả và tốc độ: LightGBM được thiết kế để xử lý các tập dữ liệu lớn với tốc độ nhanh hơn so với nhiều phương pháp truyền thống.
+CatBoost:
+
+Thuật toán tăng cường gradient: Giống như LightGBM, CatBoost cũng là một phương pháp sử dụng nhiều cây quyết định để cải thiện hiệu suất mô hình.
+Phù hợp với dữ liệu phân loại: CatBoost có khả năng xử lý tốt các đặc tính phân loại, một loại dữ liệu phổ biến trong nhiều bài toán thực tế.
+Xử lý hiệu quả các tập dữ liệu phức tạp: CatBoost không chỉ hiệu quả với dữ liệu phân loại mà còn có thể xử lý các tập dữ liệu có nhiều biến số và mối quan hệ phức tạp.
 ## Ensemble
 Trọng số của Mô hình và Voting:
 Lớp VotingModel định nghĩa cách kết hợp các dự đoán từ các mô hình riêng lẻ.
