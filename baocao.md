@@ -142,7 +142,7 @@ Ví dụ: Nếu chúng ta có 5 mô hình LightGBM và 5 mô hình CatBoost, m�
 <li> <ol>Kết hợp Dự đoán:
 
 <li>Phương pháp predict_proba xử lý việc kết hợp các xác suất:
-Các Tính năng Phân loại: Nó xử lý các tính năng phân loại khác nhau giữa các mô hình LightGBM và CatBoost. Điều này quan trọng vì các loại mô hình khác nhau có thể xử lý các tính năng phân loại theo cách khác nhau.</li>
+<li>Các Tính năng Phân loại: Nó xử lý các tính năng phân loại khác nhau giữa các mô hình LightGBM và CatBoost. Điều này quan trọng vì các loại mô hình khác nhau có thể xử lý các tính năng phân loại theo cách khác nhau.</li></li>
 <li>Trung bình Xác suất: Xác suất cuối cùng được tính toán là trung bình của các xác suất từ tất cả các mô hình.</li></ol></li>
 </ol>
 
