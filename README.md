@@ -6,7 +6,7 @@ Từ kinh nghiệm trước đây của em trong việc thẩm định tín dụ
 Dựa trên những gì đã biết về thẩm định tín dụng và các vấn đề học máy tương tự, rõ ràng hai điều sẽ rất quan trọng để xây dựng một mô hình tốt cho cuộc thi này:
 
 Một tập hợp các đặc trưng thông minh.
-Một tập hợp đa dạng các thuật toán cơ bản.
+Một tập hợp đa dạng các thuật toán phân loại.
 Em đã có thể tận dụng bốn nguồn chính của sự đa dạng đặc trưng, cùng với một số nguồn nhỏ bổ sung khác.
 
 ## Trình tổng hợp cho trích xuất đặc trưng  (Aggregator for Feature Extraction)
@@ -138,7 +138,7 @@ Xử lý hiệu quả các tập dữ liệu phức tạp: CatBoost không chỉ
 Lớp VotingModel định nghĩa cách kết hợp các dự đoán từ các mô hình riêng lẻ.
 
 Trọng số: em cho tầm quan trọng bằng nhau cho các dự đoán của mỗi mô hình.Vì không có mô hình nào nổi bật hơn hẳn trong việc predict.Em cũng thử nghiệm đánh lại trọng số cho từng mô hình nhưng kết quả không khả quan.
-Ví dụ: Nếu chúng ta có 5 mô hình LightGBM và 5 mô hình CatBoost, mỗi dự đoán của mô hình được gán trọng số là 1/10.</li>
+Ví dụ: Nếu chúng ta có 5 mẫu mô hình LightGBM và 5 mẫu mô hình CatBoost, mỗi mẫu dự đoán của mô hình được gán trọng số là 1/10.</li>
 <li> <ol>Kết hợp Dự đoán:
 
 <li>Phương pháp predict_proba xử lý việc kết hợp các xác suất:
