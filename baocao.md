@@ -139,12 +139,13 @@ Lớp VotingModel định nghĩa cách kết hợp các dự đoán từ các m�
 
 Trọng số: em cho tầm quan trọng bằng nhau cho các dự đoán của mỗi mô hình.Vì không có mô hình nào nổi bật hơn hẳn trong việc predict.Em cũng thử nghiệm đánh lại trọng số cho từng mô hình nhưng kết quả không khả quan.
 Ví dụ: Nếu chúng ta có 5 mô hình LightGBM và 5 mô hình CatBoost, mỗi dự đoán của mô hình được gán trọng số là 1/10.</li>
-<li>Kết hợp Dự đoán:
+<li> <ol>Kết hợp Dự đoán:
 
-Phương pháp predict_proba xử lý việc kết hợp các xác suất:
-Các Tính năng Phân loại: Nó xử lý các tính năng phân loại khác nhau giữa các mô hình LightGBM và CatBoost. Điều này quan trọng vì các loại mô hình khác nhau có thể xử lý các tính năng phân loại theo cách khác nhau.
-Trung bình Xác suất: Xác suất cuối cùng được tính toán là trung bình của các xác suất từ tất cả các mô hình.</li>
+<li>Phương pháp predict_proba xử lý việc kết hợp các xác suất:
+Các Tính năng Phân loại: Nó xử lý các tính năng phân loại khác nhau giữa các mô hình LightGBM và CatBoost. Điều này quan trọng vì các loại mô hình khác nhau có thể xử lý các tính năng phân loại theo cách khác nhau.</li>
+<li>Trung bình Xác suất: Xác suất cuối cùng được tính toán là trung bình của các xác suất từ tất cả các mô hình.</li></ol></li>
 </ol>
+
 ## Các thử nghiệm thất bại
 <ol>
   <li>Thử nghiệm metric hack: 
