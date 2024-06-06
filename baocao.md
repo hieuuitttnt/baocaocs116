@@ -133,16 +133,18 @@ Thuật toán tăng cường gradient: Giống như LightGBM, CatBoost cũng là
 Phù hợp với dữ liệu phân loại: CatBoost có khả năng xử lý tốt các đặc tính phân loại, một loại dữ liệu phổ biến trong nhiều bài toán thực tế.
 Xử lý hiệu quả các tập dữ liệu phức tạp: CatBoost không chỉ hiệu quả với dữ liệu phân loại mà còn có thể xử lý các tập dữ liệu có nhiều biến số và mối quan hệ phức tạp.
 ## Ensemble
-Trọng số của Mô hình và Voting:
+<ol>
+<li>Trọng số của Mô hình và Voting:
 Lớp VotingModel định nghĩa cách kết hợp các dự đoán từ các mô hình riêng lẻ.
 
 Trọng số: em cho tầm quan trọng bằng nhau cho các dự đoán của mỗi mô hình.Vì không có mô hình nào nổi bật hơn hẳn trong việc predict.Em cũng thử nghiệm đánh lại trọng số cho từng mô hình nhưng kết quả không khả quan.
-Ví dụ: Nếu chúng ta có 5 mô hình LightGBM và 5 mô hình CatBoost, mỗi dự đoán của mô hình được gán trọng số là 1/10.
-Kết hợp Dự đoán:
+Ví dụ: Nếu chúng ta có 5 mô hình LightGBM và 5 mô hình CatBoost, mỗi dự đoán của mô hình được gán trọng số là 1/10.</li>
+<li>Kết hợp Dự đoán:
 
 Phương pháp predict_proba xử lý việc kết hợp các xác suất:
 Các Tính năng Phân loại: Nó xử lý các tính năng phân loại khác nhau giữa các mô hình LightGBM và CatBoost. Điều này quan trọng vì các loại mô hình khác nhau có thể xử lý các tính năng phân loại theo cách khác nhau.
-Trung bình Xác suất: Xác suất cuối cùng được tính toán là trung bình của các xác suất từ tất cả các mô hình.
+Trung bình Xác suất: Xác suất cuối cùng được tính toán là trung bình của các xác suất từ tất cả các mô hình.</li>
+</ol>
 ## Các thử nghiệm thất bại
 <ol>
   <li>Thử nghiệm metric hack: 
